@@ -1,0 +1,13 @@
+Om een radio ontvanger te maken met de arduino due heb je de volgende hardware nodig:
+
+
+-Arduino due
+
+-TEA5767 (de radio ontvanger chip)
+
+-Jumper cables
+
+-Een input mogelijkheid (potentiometer wordt momenteel ondersteunt) 
+
+
+Note: De TEA5767 is alleen de ontvanger, je hebt dan ook nog een kristal (32,876kHz/6,5mHz/13mHz) nodig, ook is het geluid nog niet versterkt dus nog niet bruikbaar. Echter er zijn arduino varianten te koop die deze benodigdheden al ingebouwd hebben. (mocht je niet weten welk kristal is gebruikt dan is waarschijnlijk de goedkope 32,876kHz variant gebruikt.

@@ -1,0 +1,161 @@
+\hypertarget{classradio_receiver}{}\section{radio\+Receiver Class Reference}
+\label{classradio_receiver}\index{radio\+Receiver@{radio\+Receiver}}
+
+
+{\ttfamily \#include $<$radio\+Receiver.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classradio_receiver_ad40aeb52139ece882e24191e1ac6590e}{radio\+Receiver} (hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&i2c\+\_\+bus)
+\begin{DoxyCompactList}\small\item\em overwrites the frequency in the byte array with the frequency read from the T\+E\+A5767. \end{DoxyCompactList}\item 
+\hyperlink{classradio_receiver_a33dafbceb153032b6250077c273bd844}{radio\+Receiver} (char byte\+\_\+array\mbox{[}5\mbox{]}, hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&i2c\+\_\+bus)
+\begin{DoxyCompactList}\small\item\em Constructor for the \hyperlink{classradio_receiver}{radio\+Receiver} with costom settings. \end{DoxyCompactList}\item 
+void \hyperlink{classradio_receiver_ae3f3be92bf716be1933cb3f563935e02}{set\+\_\+freq} (float new\+\_\+freq)
+\begin{DoxyCompactList}\small\item\em set a new frequency. An example is\+: set\+\_\+freq(91.\+1); The new frequency will be calculated and the chip will tune to the new radio station (in this case wil ltune to 91.\+1). \end{DoxyCompactList}\item 
+float \hyperlink{classradio_receiver_a953b6a00907b39e78f89fe0b335ce520}{read\+\_\+freq} ()
+\begin{DoxyCompactList}\small\item\em reads the frequency and returns it as a float. \end{DoxyCompactList}\item 
+void \hyperlink{classradio_receiver_adf473a64e9180683d8bcdc96fed3922c}{search\+\_\+up} ()
+\begin{DoxyCompactList}\small\item\em Does a autonimous search up. \end{DoxyCompactList}\item 
+void \hyperlink{classradio_receiver_a18f37c51db68873d0634519ba0cc1cae}{search\+\_\+down} ()
+\begin{DoxyCompactList}\small\item\em Does a autonimous search down. \end{DoxyCompactList}\item 
+void \hyperlink{classradio_receiver_a4db850d4458c556996029dcc7d432dc4}{set\+\_\+bit} (int byte\+\_\+pos, int bit, bool set\+\_\+to)
+\begin{DoxyCompactList}\small\item\em Set a bit in the byte\+\_\+array for to change the settings of the chip really easy. Note\+: function does not write to the chip any changes made will be processed on the next write action. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classradio_receiver_af9a0d3ce97dfb8848bdf1f0d9beeda0b}\label{classradio_receiver_af9a0d3ce97dfb8848bdf1f0d9beeda0b}} 
+void \hyperlink{classradio_receiver_af9a0d3ce97dfb8848bdf1f0d9beeda0b}{standby} ()
+\begin{DoxyCompactList}\small\item\em disables the chip expect for the i2c input/output \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classradio_receiver_a3fbfbc241fd17d3412286f4022a19271}\label{classradio_receiver_a3fbfbc241fd17d3412286f4022a19271}} 
+void \hyperlink{classradio_receiver_a3fbfbc241fd17d3412286f4022a19271}{wake\+\_\+up} ()
+\begin{DoxyCompactList}\small\item\em enables the chip. (gets it out of standby mode) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classradio_receiver_a02a2e1d3c148f7f9bd3edfbd6b9e94ba}\label{classradio_receiver_a02a2e1d3c148f7f9bd3edfbd6b9e94ba}} 
+void \hyperlink{classradio_receiver_a02a2e1d3c148f7f9bd3edfbd6b9e94ba}{mute} ()
+\begin{DoxyCompactList}\small\item\em mutes the received sound. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classradio_receiver_ae47250996b433dcc643e9e9116bd67cb}\label{classradio_receiver_ae47250996b433dcc643e9e9116bd67cb}} 
+void \hyperlink{classradio_receiver_ae47250996b433dcc643e9e9116bd67cb}{unmute} ()
+\begin{DoxyCompactList}\small\item\em unmutes the sound. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Stein Bout 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+21/06/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classradio_receiver_ad40aeb52139ece882e24191e1ac6590e}\label{classradio_receiver_ad40aeb52139ece882e24191e1ac6590e}} 
+\index{radio\+Receiver@{radio\+Receiver}!radio\+Receiver@{radio\+Receiver}}
+\index{radio\+Receiver@{radio\+Receiver}!radio\+Receiver@{radio\+Receiver}}
+\subsubsection{\texorpdfstring{radio\+Receiver()}{radioReceiver()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily radio\+Receiver\+::radio\+Receiver (\begin{DoxyParamCaption}\item[{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&}]{i2c\+\_\+bus }\end{DoxyParamCaption})}
+
+
+
+overwrites the frequency in the byte array with the frequency read from the T\+E\+A5767. 
+
+Constructor for the \hyperlink{classradio_receiver}{radio\+Receiver} wit default settings. 
+\begin{DoxyParams}{Parameters}
+{\em hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda} & \& i2c\+\_\+bus\+: a refrence to the i2c\+\_\+bus from the hwlib libary. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classradio_receiver_a33dafbceb153032b6250077c273bd844}\label{classradio_receiver_a33dafbceb153032b6250077c273bd844}} 
+\index{radio\+Receiver@{radio\+Receiver}!radio\+Receiver@{radio\+Receiver}}
+\index{radio\+Receiver@{radio\+Receiver}!radio\+Receiver@{radio\+Receiver}}
+\subsubsection{\texorpdfstring{radio\+Receiver()}{radioReceiver()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily radio\+Receiver\+::radio\+Receiver (\begin{DoxyParamCaption}\item[{char}]{byte\+\_\+array\mbox{[}5\mbox{]},  }\item[{hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda \&}]{i2c\+\_\+bus }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \hyperlink{classradio_receiver}{radio\+Receiver} with costom settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em char} & byte\+\_\+array\mbox{[}5\mbox{]}\+: is used for the costom settings. \\
+\hline
+{\em hwlib\+::i2c\+\_\+bus\+\_\+bit\+\_\+banged\+\_\+scl\+\_\+sda} & \& i2c\+\_\+bus\+: a refrence to the i2c\+\_\+bus from the hwlib libary. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classradio_receiver_a953b6a00907b39e78f89fe0b335ce520}\label{classradio_receiver_a953b6a00907b39e78f89fe0b335ce520}} 
+\index{radio\+Receiver@{radio\+Receiver}!read\+\_\+freq@{read\+\_\+freq}}
+\index{read\+\_\+freq@{read\+\_\+freq}!radio\+Receiver@{radio\+Receiver}}
+\subsubsection{\texorpdfstring{read\+\_\+freq()}{read\_freq()}}
+{\footnotesize\ttfamily float radio\+Receiver\+::read\+\_\+freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads the frequency and returns it as a float. 
+
+\begin{DoxyReturn}{Returns}
+return a float. An example is\+: 91.\+1 this is the frequency the radio is currently tuned to. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classradio_receiver_a18f37c51db68873d0634519ba0cc1cae}\label{classradio_receiver_a18f37c51db68873d0634519ba0cc1cae}} 
+\index{radio\+Receiver@{radio\+Receiver}!search\+\_\+down@{search\+\_\+down}}
+\index{search\+\_\+down@{search\+\_\+down}!radio\+Receiver@{radio\+Receiver}}
+\subsubsection{\texorpdfstring{search\+\_\+down()}{search\_down()}}
+{\footnotesize\ttfamily void radio\+Receiver\+::search\+\_\+down (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Does a autonimous search down. 
+
+\begin{DoxyNote}{Note}
+Still work in progress 
+\end{DoxyNote}
+\mbox{\Hypertarget{classradio_receiver_adf473a64e9180683d8bcdc96fed3922c}\label{classradio_receiver_adf473a64e9180683d8bcdc96fed3922c}} 
+\index{radio\+Receiver@{radio\+Receiver}!search\+\_\+up@{search\+\_\+up}}
+\index{search\+\_\+up@{search\+\_\+up}!radio\+Receiver@{radio\+Receiver}}
+\subsubsection{\texorpdfstring{search\+\_\+up()}{search\_up()}}
+{\footnotesize\ttfamily void radio\+Receiver\+::search\+\_\+up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Does a autonimous search up. 
+
+\begin{DoxyNote}{Note}
+Still work in progress 
+\end{DoxyNote}
+\mbox{\Hypertarget{classradio_receiver_a4db850d4458c556996029dcc7d432dc4}\label{classradio_receiver_a4db850d4458c556996029dcc7d432dc4}} 
+\index{radio\+Receiver@{radio\+Receiver}!set\+\_\+bit@{set\+\_\+bit}}
+\index{set\+\_\+bit@{set\+\_\+bit}!radio\+Receiver@{radio\+Receiver}}
+\subsubsection{\texorpdfstring{set\+\_\+bit()}{set\_bit()}}
+{\footnotesize\ttfamily void radio\+Receiver\+::set\+\_\+bit (\begin{DoxyParamCaption}\item[{int}]{byte\+\_\+pos,  }\item[{int}]{bit,  }\item[{bool}]{set\+\_\+to }\end{DoxyParamCaption})}
+
+
+
+Set a bit in the byte\+\_\+array for to change the settings of the chip really easy. Note\+: function does not write to the chip any changes made will be processed on the next write action. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & byte\+\_\+pos\+: is the between 0 and 4 for all the bytes send. so 0 is the first byte send and 4 is the last byte send. \\
+\hline
+{\em int} & bit\+: is the bit from the byte you want to change. A byte has only 8 bits so we will be using 0 to 7, where 0 is the first bit and 7 is the last bit. \\
+\hline
+{\em bool} & set\+\_\+to\+: decides if the selected bit needs to change to a 0 or a 1. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classradio_receiver_ae3f3be92bf716be1933cb3f563935e02}\label{classradio_receiver_ae3f3be92bf716be1933cb3f563935e02}} 
+\index{radio\+Receiver@{radio\+Receiver}!set\+\_\+freq@{set\+\_\+freq}}
+\index{set\+\_\+freq@{set\+\_\+freq}!radio\+Receiver@{radio\+Receiver}}
+\subsubsection{\texorpdfstring{set\+\_\+freq()}{set\_freq()}}
+{\footnotesize\ttfamily void radio\+Receiver\+::set\+\_\+freq (\begin{DoxyParamCaption}\item[{float}]{new\+\_\+freq }\end{DoxyParamCaption})}
+
+
+
+set a new frequency. An example is\+: set\+\_\+freq(91.\+1); The new frequency will be calculated and the chip will tune to the new radio station (in this case wil ltune to 91.\+1). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & new\+\_\+freq\+: is the value for the new frequency. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{radio_receiver_8hpp}{radio\+Receiver.\+hpp}\item 
+lib/radio\+Receiver.\+cpp\end{DoxyCompactItemize}

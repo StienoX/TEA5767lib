@@ -1,0 +1,67 @@
+\hypertarget{classpotmeter}{}\section{potmeter Class Reference}
+\label{classpotmeter}\index{potmeter@{potmeter}}
+
+
+{\ttfamily \#include $<$potmeter\+Input.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classpotmeter_aeb2e784bddd5d068fa79f9cf33a61419}{potmeter} (int min\+\_\+value, int max\+\_\+value, bool bandwith, due\+::pin\+\_\+adc \&input)
+\begin{DoxyCompactList}\small\item\em Constructor for the potmeter with max and min values of the potentiometer. \end{DoxyCompactList}\item 
+float \hyperlink{classpotmeter_ad156c1b9cfbd8eb082c1c14af44d19b2}{get\+\_\+pot\+\_\+freq} ()
+\begin{DoxyCompactList}\small\item\em The get function wich calculates and returns the frequency based on the setting of the potentiometer. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxyAuthor}{Author}
+Stein Bout 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+21/06/2017 
+\end{DoxyDate}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classpotmeter_aeb2e784bddd5d068fa79f9cf33a61419}\label{classpotmeter_aeb2e784bddd5d068fa79f9cf33a61419}} 
+\index{potmeter@{potmeter}!potmeter@{potmeter}}
+\index{potmeter@{potmeter}!potmeter@{potmeter}}
+\subsubsection{\texorpdfstring{potmeter()}{potmeter()}}
+{\footnotesize\ttfamily potmeter\+::potmeter (\begin{DoxyParamCaption}\item[{int}]{min\+\_\+value,  }\item[{int}]{max\+\_\+value,  }\item[{bool}]{bandwith,  }\item[{due\+::pin\+\_\+adc \&}]{input }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor for the potmeter with max and min values of the potentiometer. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em int} & min\+\_\+value\+: the minium value from the potentiometer. \\
+\hline
+{\em int} & max\+\_\+value\+: the maxium value from the potentiometer. \\
+\hline
+{\em bool} & bandwith\+: 1 for europe/us; 0 for japan \\
+\hline
+{\em due\+::pin\+\_\+adc} & \& input\+: the analog input pin used when connecting the potentiometer. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classpotmeter_ad156c1b9cfbd8eb082c1c14af44d19b2}\label{classpotmeter_ad156c1b9cfbd8eb082c1c14af44d19b2}} 
+\index{potmeter@{potmeter}!get\+\_\+pot\+\_\+freq@{get\+\_\+pot\+\_\+freq}}
+\index{get\+\_\+pot\+\_\+freq@{get\+\_\+pot\+\_\+freq}!potmeter@{potmeter}}
+\subsubsection{\texorpdfstring{get\+\_\+pot\+\_\+freq()}{get\_pot\_freq()}}
+{\footnotesize\ttfamily float potmeter\+::get\+\_\+pot\+\_\+freq (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+The get function wich calculates and returns the frequency based on the setting of the potentiometer. 
+
+\begin{DoxyReturn}{Returns}
+float\+: return the (new) frequency for the radio. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+lib/\hyperlink{potmeter_input_8hpp}{potmeter\+Input.\+hpp}\end{DoxyCompactItemize}
